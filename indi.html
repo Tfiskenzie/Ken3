@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Individual Sign-Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="indi.css">
+</head>
+<body>
+  <style>
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 1px solid rgb(255, 255, 255);
+  outline: none;
+  background: transparent;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-family: 'poppins', sans-serif;
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-top: 0;
+  border-left: 0;
+  outline: none;
+  background: transparent;
+  
+}
+
+#terick{
+  color: red;
+}
+
+  input:focus {
+    border-color: black;
+    box-shadow: none;
+  }
+
+  body {
+  font-family: 'poppins', sans-serif;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+
+
+.signup-card {
+  background: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 400px;
+    border: none;
+    text-align: center;
+}
+
+
+.primary-btn {
+  width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+    background: gray;
+}
+
+.primary-btn:hover {
+    background: blue;
+  }
+
+
+
+
+  </style>
+  <div class="contain">
+    <div class="navbar">
+      <div class="logo">
+        <a href="Signup.html"><img src="left2.jpg" alt=""></a>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="signup-card">
+        <h2>Create a Personal Account</h2>
+        <p>Please fill in your details to get started.</p>
+
+        <!-- Sign-Up Form -->
+        <form action="indi_signup.php" method="POST" id="individual-signup-form">
+          <div class="form-group">
+            <label for="fullname">Full Name<i id="terick">**</i></label>
+            <input type="text" name="fullname" id="fullname" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address<i id="terick">**</i></label>
+            <input type="email" name="email" id="email" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label for="country">State</label>
+            <select name="country" id="country" required>
+              <option value="" disabled selected>Select your state</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Abuja">Abuja</option>
+              <option value="Port Harcourt">Port Harcourt</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password<i id="terick">**</i></label>
+            <input type="password" name="password" id="password" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password<i id="terick">**</i></label>
+            <input type="password" name="confirm_password" id="confirm-password" placeholder="" required>
+          </div>
+
+          <button type="submit" class="btn primary-btn">Sign Up</button>
+        </form>
+
+        <p class="redirect-text">
+          Already have an account? <a href="loginn.php">Log in</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript Validation for Password Match
+    document.querySelector('form').addEventListener('submit', function (e) {
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirm-password');
+      let isValid = true;
+
+      if (password.value !== confirmPassword.value) {
+        isValid = false;
+
+        // Add the error class
+        password.classList.add('error');
+        confirmPassword.classList.add('error');
+
+        // Display an error message (optional)
+        if (!document.querySelector('.error-message')) {
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = "Passwords do not match.";
+          errorMessage.classList.add('error-message');
+          confirmPassword.parentNode.appendChild(errorMessage);
+        }
+      } else {
+        // Remove error class if passwords match
+        password.classList.remove('error');
+        confirmPassword.classList.remove('error');
+
+        // Remove error message
+        const errorMessage = document.querySelector('.error-message');
+        if (errorMessage) {
+          errorMessage.remove();
+        }
+      }
+
+      if (!isValid) {
+        e.preventDefault(); // Prevent form submission
+      }
+    });
+  </script>
+  
+</body>
+</html>

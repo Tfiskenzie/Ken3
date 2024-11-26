@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'poppins', sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .login-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 400px;
+    border: none;
+    text-align: center;
+  }
+
+  .navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    }
+
+    .logo{
+      animation: slideTop 2s ease forwards;
+  }
+
+   a{
+    text-decoration: none;
+    color: black;
+
+  }
+
+  .contain{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.contain img{
+  width: 20px ;
+}
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    top: 180px;
+width: 280px;
+  }
+  
+  label {
+    font-size: 0.85rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input {
+  width: 100%;
+padding: 10px 0;
+margin: 5px 0;
+border-top: 0;
+border-left: 0;
+border-right: 1px solid rgb(255, 255, 255);
+outline: none;
+background: transparent;
+  }
+
+  #terick{
+    color: red;
+  }
+  
+
+  input[type = "checkbox"]{
+    appearance: none;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+  }
+
+  input[type = "checkbox"]:checked{
+    background-color: #007bff;
+    border-color: #0056b3;
+  }
+  
+  input[type = "checkbox"]:checked::after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-options label {
+    font-size: 0.85rem;
+    color: #495057;
+  }
+
+
+  
+  .forgot-password {
+    font-size: 0.85rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+  }
+
+
+  .btn:hover{
+    background: wheat;
+  }
+
+  
+  .primary-btn {
+    background: wheat;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2);
+  }
+  
+  .primary-btn:hover {
+    background: blue;
+  }
+  
+  .divider {
+    font-size: 0.85rem;
+    color: #6c757d;
+    position: relative;
+    margin: 1rem 0;
+  }
+  
+  .divider span {
+    background: #ffffff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    height: 1px;
+    background: #dee2e6;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .social-login {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fc;
+    border: 1px solid #ced4da;
+    color: #495057;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 45%;
+    justify-content: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+  
+  .social-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .social-btn:hover {
+    background: #e9ecef;
+  }
+  
+  .signup-text {
+    font-size: 0.85rem;
+    color: #495057;
+    margin-top: 1rem;
+  }
+  
+  .signup-text a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  
